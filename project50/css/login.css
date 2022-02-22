@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: black;
+}
+
+.container {
+  position: relative;
+  max-width: 430px;
+  width: 100%;
+  background: #fff;
+  -webkit-box-shadow: 0 0px 10px white;
+          box-shadow: 0 0px 10px white;
+  border-radius: 10px;
+}
+
+.container .forms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 440px;
+  width: 200%;
+  -webkit-transition: height 0.2s ease;
+  transition: height 0.2s ease;
+}
+
+.container .form {
+  width: 50%;
+  padding: 30px;
+  background-color: #fff;
+  -webkit-transition: margin-left 0.18s ease;
+  transition: margin-left 0.18s ease;
+}
+
+.container.active .login {
+  margin-left: -50%;
+  opacity: 0;
+  -webkit-transition: margin-left 0.18s ease, opacity 0.05s ease;
+  transition: margin-left 0.18s ease, opacity 0.05s ease;
+}
+
+.container .signup {
+  opacity: 0;
+  -webkit-transition: opacity 0.05s ease;
+  transition: opacity 0.05s ease;
+}
+
+.container.active .signup {
+  opacity: 1;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+
+.container.active .forms {
+  height: 600px;
+}
+
+.container .form .title {
+  font-size: 27px;
+  position: relative;
+  font-weight: 600;
+  padding-bottom: 2px;
+}
+
+.container .form .title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0px;
+  background-color: black;
+  border-radius: 25px;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.container .form .title:hover::before {
+  width: 74px;
+}
+
+.container .form .input-field {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 26px;
+}
+
+.container .form .input-field input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 0 35px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-bottom: 2px solid #ccc;
+  border-top: 2px solid transparent;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.container .form .input-field input:is(:focus, :valid) {
+  border-bottom-color: black;
+}
+
+.container .form .input-field i {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #999;
+  font-size: 23px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.container .form .input-field input:is(:focus, :valid) ~ i {
+  color: black;
+}
+
+.container .form .input-field i.icon {
+  left: 0;
+}
+
+.container .form .input-field i.showHidePw {
+  right: 0;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.container .form .checkbox-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 20px;
+}
+
+.container .form .checkbox-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .form .checkbox-content input {
+  margin: 0 8px -2px 4px;
+  accent-color: black;
+}
+
+.container .form .text {
+  color: #333;
+  font-size: 14px;
+}
+
+.container .form a.text {
+  color: #040349;
+  font-size: 14px;
+}
+
+.container .form a {
+  text-decoration: none;
+}
+
+.container .form a:hover {
+  text-decoration: underline;
+}
+
+.container .form .button {
+  margin-top: 35px;
+}
+
+.container .form .button input {
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  background-color: #333;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.container .form .button input:hover {
+  background-color: #494949;
+}
+
+.container .form .login-signup {
+  margin-top: 26px;
+  text-align: center;
+}
+/*# sourceMappingURL=login.css.map */
